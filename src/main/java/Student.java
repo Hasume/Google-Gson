@@ -1,9 +1,17 @@
-public class Student { private String fullName;
+import com.google.gson.annotations.SerializedName;
+
+public class Student {
+    @SerializedName("full_name")
+    private String fullName;
+
+    @SerializedName("university_id")
     private String universityId;
+
+    @SerializedName("current_course_number")
     private int currentCourseNumber;
+
+    @SerializedName("avg_exam_score")
     private float avgExamScore;
-
-
 
     public Student() {
     }
@@ -14,8 +22,6 @@ public class Student { private String fullName;
         this.currentCourseNumber = currentCourseNumber;
         this.avgExamScore = avgExamScore;
     }
-
-
 
     public String getFullName() {
         return fullName;
@@ -48,8 +54,6 @@ public class Student { private String fullName;
     public void setAvgExamScore(float avgExamScore) {
         this.avgExamScore = avgExamScore;
     }
-
-
 
     @Override
     public String toString() {

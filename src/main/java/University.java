@@ -1,30 +1,38 @@
-public class University {  private String id;
+import com.google.gson.annotations.SerializedName;
+
+public class University {
+    @SerializedName("id")
+    private String universityId;
+
+    @SerializedName("full_name")
     private String fullName;
+
+    @SerializedName("short_name")
     private String shortName;
+
+    @SerializedName("year_of_foundation")
     private int yearOfFoundation;
+
+    @SerializedName("main_profile")
     private Myclass.StudyProfile mainProfile;
-
-
 
     public University() {
     }
 
-    public University(String id, String fullName, String shortName, int yearOfFoundation, Myclass.StudyProfile mainProfile) {
-        this.id = id;
+    public University(String universityId, String fullName, String shortName, int yearOfFoundation, Myclass.StudyProfile mainProfile) {
+        this.universityId = universityId;
         this.fullName = fullName;
         this.shortName = shortName;
         this.yearOfFoundation = yearOfFoundation;
         this.mainProfile = mainProfile;
     }
 
-
-
-    public String getId() {
-        return id;
+    public String getUniversityId() {
+        return universityId;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setUniversityId(String universityId) {
+        this.universityId = universityId;
     }
 
     public String getFullName() {
@@ -59,12 +67,10 @@ public class University {  private String id;
         this.mainProfile = mainProfile;
     }
 
-
-
     @Override
     public String toString() {
         return "University{" +
-                "id='" + id + '\'' +
+                "universityId='" + universityId + '\'' +
                 ", fullName='" + fullName + '\'' +
                 ", shortName='" + shortName + '\'' +
                 ", yearOfFoundation=" + yearOfFoundation +
